@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Скандинавский Майнкрафт Сервер</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#C5A572',secondary:'#E5E5E5'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: #1A1A1A;
+color: #E5E5E5;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Cinzel', serif;
+}
+.hero-section {
+background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://readdy.ai/api/search-image?query=medieval%2520scandinavian%2520viking%2520settlement%2520with%2520wooden%2520houses%2520and%2520longships%2520in%2520a%2520minecraft%2520style%2C%2520realistic%2520texture%2C%2520dark%2520atmosphere%2C%2520dramatic%2520lighting%2C%2520foggy%2520environment%2C%2520mountains%2520in%2520background%2C%2520high%2520quality%2520render&width=1920&height=1080&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.feature-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(197, 165, 114, 0.3);
+}
+.pricing-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(197, 165, 114, 0.3);
+}
+.rune-border {
+position: relative;
+}
+.rune-border::before, .rune-border::after {
+content: "";
+position: absolute;
+height: 3px;
+width: 60px;
+background-color: #C5A572;
+}
+.rune-border::before {
+left: -70px;
+top: 50%;
+}
+.rune-border::after {
+right: -70px;
+top: 50%;
+}
+input:focus, button:focus {
+outline: none;
+box-shadow: 0 0 0 2px rgba(197, 165, 114, 0.5);
+}
+.custom-checkbox {
+appearance: none;
+-webkit-appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #C5A572;
+border-radius: 4px;
+background-color: transparent;
+display: inline-block;
+position: relative;
+margin-right: 8px;
+cursor: pointer;
+}
+.custom-checkbox:checked {
+background-color: #C5A572;
+}
+.custom-checkbox:checked::after {
+content: '';
+position: absolute;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+top: 2px;
+left: 6px;
+transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+<header class="bg-[#121212] py-4 px-6 fixed w-full z-50">
+<div class="container mx-auto flex justify-between items-center">
+<div class="flex items-center">
+<a href="#" class="text-primary font-['Pacifico'] text-3xl">Valhalla</a>
+</div>
+<nav class="hidden md:flex space-x-8">
+<a href="#" class="text-white hover:text-primary transition-colors duration-300">Главная</a>
+<a href="#about" class="text-white hover:text-primary transition-colors duration-300">О сервере</a>
+<a href="#rules" class="text-white hover:text-primary transition-colors duration-300">Правила</a>
+<a href="#pricing" class="text-white hover:text-primary transition-colors duration-300">Покупка проходки</a>
+</nav>
+<div class="flex items-center space-x-4">
+<button class="bg-transparent border border-primary text-primary hover:bg-primary hover:text-[#121212] transition-colors duration-300 px-4 py-2 !rounded-button whitespace-nowrap">Войти</button>
+<button class="md:hidden flex items-center justify-center w-10 h-10 text-white">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<section id="hero" class="hero-section min-h-screen flex items-center pt-20">
+<div class="container mx-auto px-6 py-20">
+<div class="max-w-3xl">
+<h1 class="text-5xl md:text-6xl font-bold text-white mb-6">СКАНДИНАВСКИЙ МИР VALHALLA</h1>
+<p class="text-xl text-secondary mb-8">Погрузитесь в атмосферу средневековой Скандинавии в мире Minecraft. Стройте, исследуйте и сражайтесь в реалистичном окружении с модами, дополняющими ванильную стилистику.</p>
+<a href="#pricing" class="inline-block bg-primary text-[#121212] font-semibold px-8 py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Начать игру</a>
+</div>
+</div>
+</section>
+<section id="about" class="py-20 bg-[#151515]">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 inline-block relative rune-border">О СЕРВЕРЕ</h2>
+<p class="text-secondary max-w-3xl mx-auto">Наш сервер предлагает уникальный игровой опыт, сочетающий в себе реализм средневековой Скандинавии и увлекательный геймплей Minecraft.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="feature-card bg-[#1D1D1D] p-8 rounded transition-all duration-300 border border-[#2A2A2A]">
+<div class="w-16 h-16 flex items-center justify-center bg-[#2A2A2A] rounded-full mb-6">
+<i class="ri-building-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Скандинавская архитектура</h3>
+<p class="text-secondary">Стройте аутентичные скандинавские поселения, длинные дома, крепости и корабли викингов с расширенными возможностями строительства.</p>
+</div>
+<div class="feature-card bg-[#1D1D1D] p-8 rounded transition-all duration-300 border border-[#2A2A2A]">
+<div class="w-16 h-16 flex items-center justify-center bg-[#2A2A2A] rounded-full mb-6">
+<i class="ri-sword-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Средневековые моды</h3>
+<p class="text-secondary">Исследуйте мир с модами на средневековое оружие, броню, инструменты и предметы быта, сохраняющие ванильную стилистику игры.</p>
+</div>
+<div class="feature-card bg-[#1D1D1D] p-8 rounded transition-all duration-300 border border-[#2A2A2A]">
+<div class="w-16 h-16 flex items-center justify-center bg-[#2A2A2A] rounded-full mb-6">
+<i class="ri-group-line ri-xl text-primary"></i>
+</div>
+<h3 class="text-xl font-bold mb-4">Государственная система</h3>
+<p class="text-secondary">Создавайте свои кланы, присоединяйтесь к существующим поселениям или основывайте собственные государства с уникальной политической системой.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-[#1A1A1A]">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<div class="bg-[#121212] p-1 rounded-lg">
+<img src="https://static.readdy.ai/image/5825daf41fa9da744829ca059bfd5fc8/9ed3fbfd6176a7fea255e01de7be125a.jpeg" alt="Скандинавское поселение" class="rounded w-full h-auto object-cover">
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-3xl font-bold mb-6">Реалистичный игровой мир</h2>
+<p class="text-secondary mb-6">Наш сервер предлагает глубокое погружение в атмосферу средневековой Скандинавии с вниманием к историческим деталям и реализму.</p>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span>Детализированный ландшафт с фьордами, лесами и горами</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span>Реалистичная экономика и торговля между поселениями</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span>Сезонные изменения и погодные эффекты</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+<i class="ri-check-line text-primary"></i>
+</div>
+<span>Расширенная система ремесел и профессий</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="rules" class="py-20 bg-[#151515]">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 inline-block relative rune-border">ПРАВИЛА СЕРВЕРА</h2>
+<p class="text-secondary max-w-3xl mx-auto">Для поддержания комфортной игровой атмосферы и справедливого игрового процесса, мы просим всех игроков соблюдать следующие правила:</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+<div class="bg-[#1D1D1D] p-8 rounded border border-[#2A2A2A]">
+<h3 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-4">
+<i class="ri-user-line text-primary"></i>
+</div>
+Поведение игроков
+</h3>
+<ul class="space-y-3 text-secondary">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Уважайте других игроков, избегайте оскорблений и токсичного поведения</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Запрещено использование читов, эксплойтов и модификаций, дающих преимущество</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Гриферство и разрушение чужих построек строго запрещено</span>
+</li>
+</ul>
+</div>
+<div class="bg-[#1D1D1D] p-8 rounded border border-[#2A2A2A]">
+<h3 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-4">
+<i class="ri-building-4-line text-primary"></i>
+</div>
+Строительство и территории
+</h3>
+<ul class="space-y-3 text-secondary">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Соблюдайте скандинавский стиль при строительстве</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Чтобы начать стройку нужно разрешение Ярла</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Уважайте границы чужих территорий и поселений</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Запрещено строительство, нарушающее ландшафт или блокирующее проходы</span>
+</li>
+</ul>
+</div>
+<div class="bg-[#1D1D1D] p-8 rounded border border-[#2A2A2A]">
+<h3 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-4">
+<i class="ri-sword-line text-primary"></i>
+</div>
+PvP и конфликты
+</h3>
+<ul class="space-y-3 text-secondary">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>PvP разрешен только в специально отведенных зонах и при объявлении войны</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Запрещено убийство игроков в мирное время</span>
+</li>
+</ul>
+</div>
+<div class="bg-[#1D1D1D] p-8 rounded border border-[#2A2A2A]">
+<h3 class="text-xl font-bold mb-4 flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-[#2A2A2A] rounded-full mr-4">
+<i class="ri-chat-3-line text-primary"></i>
+</div>
+Общение и чат
+</h3>
+<ul class="space-y-3 text-secondary">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Запрещены оскорбления, дискриминация и токсичное поведение</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Не спамьте в общем чате и используйте соответствующие каналы</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-arrow-right-s-line"></i>
+</div>
+<span>Запрещена реклама других серверов и проектов</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="pricing" class="py-20 bg-[#1A1A1A]">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-4 inline-block relative rune-border">ПОКУПКА ПРОХОДКИ</h2>
+<p class="text-secondary max-w-3xl mx-auto">Выберите подходящий тарифный план и присоединяйтесь к нашему скандинавскому миру. Все средства идут на поддержку и развитие сервера.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+<div class="pricing-card bg-[#1D1D1D] rounded-lg overflow-hidden transition-all duration-300 border border-[#2A2A2A]">
+<div class="bg-[#242424] py-6 px-8 text-center">
+<h3 class="text-2xl font-bold">1 месяц</h3>
+</div>
+<div class="p-8">
+<div class="text-center mb-6">
+<span class="text-4xl font-bold text-primary">100 ₽</span>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span>Полный доступ к серверу</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-[#4A4A4A]">
+<i class="ri-close-line"></i>
+</div>
+<span class="text-[#4A4A4A]">Скидка на продление</span>
+</li>
+</ul>
+<button class="w-full bg-primary text-[#121212] font-semibold py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Купить проходку</button>
+</div>
+</div>
+<div class="pricing-card bg-[#1D1D1D] rounded-lg overflow-hidden transition-all duration-300 border border-primary relative">
+<div class="absolute top-0 right-0 bg-primary text-[#121212] px-4 py-1 text-sm font-semibold">Популярный</div>
+<div class="bg-[#242424] py-6 px-8 text-center">
+<h3 class="text-2xl font-bold">3 месяца</h3>
+<p class="text-sm text-secondary mt-2">Удобнее, чем тариф на 1 месяц</p>
+</div>
+<div class="p-8">
+<div class="text-center mb-6">
+<span class="text-4xl font-bold text-primary">270 ₽</span>
+<span class="text-sm text-secondary ml-2 line-through">300 ₽</span>
+<p class="text-sm text-green-500 mt-1">Экономия 10%</p>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span>Полный доступ к серверу</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span>Скидка 10% на продление</span>
+</li>
+</ul>
+<button class="w-full bg-primary text-[#121212] font-semibold py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Купить проходку</button>
+</div>
+</div>
+<div class="pricing-card bg-[#1D1D1D] rounded-lg overflow-hidden transition-all duration-300 border border-[#2A2A2A]">
+<div class="bg-[#242424] py-6 px-8 text-center">
+<h3 class="text-2xl font-bold">6 месяцев</h3>
+<p class="text-sm text-secondary mt-2">Удобнее, чем тариф на 3 месяца</p>
+</div>
+<div class="p-8">
+<div class="text-center mb-6">
+<span class="text-4xl font-bold text-primary">480 ₽</span>
+<span class="text-sm text-secondary ml-2 line-through">600 ₽</span>
+<p class="text-sm text-green-500 mt-1">Экономия 20%</p>
+</div>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span>Полный доступ к серверу</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span>Скидка 20% на продление</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1 text-primary">
+<i class="ri-check-line"></i>
+</div>
+<span>VIP статус в дискорде</span>
+</li>
+</ul>
+<button class="w-full bg-primary text-[#121212] font-semibold py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Купить проходку</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-[#151515]">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto bg-[#1D1D1D] p-10 rounded-lg border border-[#2A2A2A]">
+<div class="text-center mb-10">
+<h2 class="text-3xl font-bold mb-4">Присоединяйтесь к нам сегодня</h2>
+<p class="text-secondary">Станьте частью нашего растущего сообщества и создайте свою историю в скандинавском мире</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2">
+<img src="https://static.readdy.ai/image/5825daf41fa9da744829ca059bfd5fc8/5b248529e190135966a72d7a428e0c3b.jpeg" alt="Воин викинг" class="rounded-lg w-full h-auto">
+</div>
+<div class="w-full md:w-1/2">
+<form class="space-y-6" action="mailto:d0898344@gmail.com" method="POST" enctype="text/plain">
+<div>
+<label for="name" class="block text-sm font-medium mb-2">Ваше имя</label>
+<input type="text" id="name" name="name" class="w-full bg-[#242424] border-none rounded p-3 text-white focus:ring-2 focus:ring-primary" placeholder="Введите ваше имя">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium mb-2">Email</label>
+<input type="email" id="email" class="w-full bg-[#242424] border-none rounded p-3 text-white focus:ring-2 focus:ring-primary" placeholder="Введите ваш email">
+</div>
+<div>
+<label for="minecraft" class="block text-sm font-medium mb-2">Ник в Minecraft</label>
+<input type="text" id="minecraft" class="w-full bg-[#242424] border-none rounded p-3 text-white focus:ring-2 focus:ring-primary" placeholder="Введите ваш ник">
+</div>
+<div class="flex items-center">
+<input type="checkbox" id="terms" class="custom-checkbox">
+<label for="terms" class="text-sm">Я согласен с <a href="#" class="text-primary hover:underline">правилами сервера</a> и <a href="#" class="text-primary hover:underline">политикой конфиденциальности</a></label>
+</div>
+<button type="submit" class="w-full bg-primary text-[#121212] font-semibold py-3 !rounded-button hover:bg-opacity-90 transition-all duration-300 whitespace-nowrap">Отправить заявку</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-[#121212] py-12">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+<div>
+<a href="#" class="text-primary font-['Pacifico'] text-3xl mb-4 inline-block">Valhalla</a>
+<p class="text-secondary mb-6">Погрузитесь в атмосферу средневековой Скандинавии в мире Minecraft.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1D1D1D] rounded-full hover:bg-primary hover:text-[#121212] transition-colors duration-300">
+<i class="ri-discord-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1D1D1D] rounded-full hover:bg-primary hover:text-[#121212] transition-colors duration-300">
+<i class="ri-telegram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1D1D1D] rounded-full hover:bg-primary hover:text-[#121212] transition-colors duration-300">
+<i class="ri-vk-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-[#1D1D1D] rounded-full hover:bg-primary hover:text-[#121212] transition-colors duration-300">
+<i class="ri-youtube-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Навигация</h4>
+<ul class="space-y-2">
+<li><a href="#" class="text-secondary hover:text-primary transition-colors duration-300">Главная</a></li>
+<li><a href="#about" class="text-secondary hover:text-primary transition-colors duration-300">О сервере</a></li>
+<li><a href="#rules" class="text-secondary hover:text-primary transition-colors duration-300">Правила</a></li>
+<li><a href="#pricing" class="text-secondary hover:text-primary transition-colors duration-300">Покупка проходки</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Контакты</h4>
+<ul class="space-y-2">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<span class="text-secondary">d0898344@gmail.com</span>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center mr-3 mt-1">
+<i class="ri-discord-line text-primary"></i>
+</div>
+<span class="text-secondary">@Faldskimerkh-Telegram
+https://www.youtube.com/@DDwX_Alt-Youtube
+https://discord.gg/wx3JKUcU-Discord Server
+</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-4">Информация</h4>
+<ul class="space-y-2">
+<li><a href="#" data-modal="privacy" class="text-secondary hover:text-primary transition-colors duration-300">Политика конфиденциальности</a></li>
+<li><a href="#" data-modal="terms" class="text-secondary hover:text-primary transition-colors duration-300">Условия использования</a></li>
+<li><a href="#" data-modal="faq" class="text-secondary hover:text-primary transition-colors duration-300">Часто задаваемые вопросы</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-[#2A2A2A] mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+<p class="text-secondary text-sm">© 2025 Valhalla. Все права защищены. Minecraft является зарегистрированной торговой маркой Mojang AB.</p>
+<div class="flex space-x-4 mt-4 md:mt-0">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-visa-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-mastercard-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-paypal-line ri-lg"></i>
+</div>
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-bank-card-line ri-lg"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.querySelector('.md\\:hidden');
+const nav = document.querySelector('nav');
+mobileMenuButton.addEventListener('click', function() {
+nav.classList.toggle('hidden');
+nav.classList.toggle('flex');
+nav.classList.toggle('flex-col');
+nav.classList.toggle('absolute');
+nav.classList.toggle('top-16');
+nav.classList.toggle('right-6');
+nav.classList.toggle('bg-[#121212]');
+nav.classList.toggle('p-4');
+nav.classList.toggle('rounded');
+nav.classList.toggle('shadow-lg');
+nav.classList.toggle('z-50');
+});
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+// Close mobile menu if open
+if (!nav.classList.contains('hidden') && window.innerWidth < 768) {
+nav.classList.add('hidden');
+}
+}
+});
+});
+});
+</script>
+<script id="form-script">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('form');
+const checkbox = document.getElementById('terms');
+const privacyLinks = document.querySelectorAll('a[href="#"][data-modal="privacy"]');
+const termsLinks = document.querySelectorAll('a[href="#"][data-modal="terms"]');
+const faqLinks = document.querySelectorAll('a[href="#"][data-modal="faq"]');
+// Create modal container if it doesn't exist
+let modalContainer = document.getElementById('modal-container');
+if (!modalContainer) {
+modalContainer = document.createElement('div');
+modalContainer.id = 'modal-container';
+modalContainer.className = 'fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center';
+document.body.appendChild(modalContainer);
+}
+// Privacy Policy Modal Content
+const privacyContent = `
+<div class="bg-[#1D1D1D] max-w-2xl mx-4 p-8 rounded-lg relative max-h-[80vh] overflow-y-auto">
+<h2 class="text-2xl font-bold mb-6">Политика конфиденциальности</h2>
+<div class="space-y-4 text-secondary">
+<p>1. Сбор и использование информации</p>
+<p>Мы собираем только ту информацию, которую вы предоставляете добровольно при регистрации на сервере:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Игровой никнейм</li>
+<li>Email адрес</li>
+<li>IP адрес при подключении к серверу</li>
+</ul>
+<p>2. Защита информации</p>
+<p>Мы принимаем все необходимые меры для защиты ваших персональных данных от несанкционированного доступа.</p>
+<p>3. Использование данных</p>
+<p>Собранная информация используется исключительно для:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Идентификации игрока на сервере</li>
+<li>Связи с игроком по техническим вопросам</li>
+<li>Предоставления доступа к серверу</li>
+</ul>
+</div>
+<button class="absolute top-4 right-4 text-gray-500 hover:text-white" onclick="closeModal()">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+`;
+// Terms of Service Modal Content
+const termsContent = `
+<div class="bg-[#1D1D1D] max-w-2xl mx-4 p-8 rounded-lg relative max-h-[80vh] overflow-y-auto">
+<h2 class="text-2xl font-bold mb-6">Условия использования</h2>
+<div class="space-y-4 text-secondary">
+<p class="font-bold">1. Общие положения</p>
+<p>Используя наш сервер, вы соглашаетесь соблюдать следующие правила:</p>
+<p class="font-bold">2. Запрещенные действия</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Использование любых читов, хаков или модификаций, дающих преимущество</li>
+<li>Распространение сборки модов сервера</li>
+<li>Использование эксплойтов или багов игры</li>
+<li>Продажа или передача игровых предметов за реальные деньги</li>
+</ul>
+<p class="font-bold">3. Модификации сервера</p>
+<p>Строго запрещено:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Распространять сборку модов сервера</li>
+<li>Модифицировать клиент игры</li>
+<li>Создавать альтернативные версии клиента</li>
+</ul>
+<p class="font-bold">4. Наказания</p>
+<p>За нарушение правил предусмотрены следующие наказания:</p>
+<ul class="list-disc pl-6 space-y-2">
+<li>Временный бан</li>
+<li>Перманентный бан</li>
+<li>Обнуление прогресса</li>
+</ul>
+</div>
+<button class="absolute top-4 right-4 text-gray-500 hover:text-white" onclick="closeModal()">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+`;
+function showModal(content) {
+modalContainer.innerHTML = content;
+modalContainer.classList.remove('hidden');
+}
+window.closeModal = function() {
+modalContainer.classList.add('hidden');
+}
+privacyLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+showModal(privacyContent);
+});
+});
+termsLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+showModal(termsContent);
+});
+});
+// FAQ Modal Content
+const faqContent = `
+<div class="bg-[#1D1D1D] max-w-2xl mx-4 p-8 rounded-lg relative max-h-[80vh] overflow-y-auto">
+<h2 class="text-2xl font-bold mb-6">Часто задаваемые вопросы</h2>
+<div class="space-y-6 text-secondary">
+<div>
+<h3 class="text-lg font-bold text-white mb-2">Как зарегистрироваться на сервере?</h3>
+<p>1. Купите проходку на сервер в разделе "Покупка проходки"</p>
+<p>2. После оплаты вы получите письмо с инструкциями на указанный email</p>
+<p>3. Запустите игру Minecraft Forge версии 1.20.1</p>
+<p>4. Добавьте наш сервер в список серверов: play.valhalla-mc.ru</p>
+<p>5. Войдите на сервер, используя ваш никнейм</p>
+</div>
+<div>
+<h3 class="text-lg font-bold text-white mb-2">Какой тариф выбрать?</h3>
+<p>Для новых игроков мы рекомендуем начать с тарифа на 1 месяц. Это позволит вам познакомиться с сервером и понять, насколько вам интересен наш проект.</p>
+<p>Если вам понравится игра на сервере, то выгоднее будет приобрести проходку на 3 или 6 месяцев - это даст вам существенную скидку и дополнительные преимущества.</p>
+</div>
+</div>
+<button class="absolute top-4 right-4 text-gray-500 hover:text-white" onclick="closeModal()">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+`;
+faqLinks.forEach(link => {
+link.addEventListener('click', (e) => {
+e.preventDefault();
+showModal(faqContent);
+});
+});
+if (form) {
+form.addEventListener('submit', function(e) {
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const minecraft = document.getElementById('minecraft').value;
+if (!name || !email || !minecraft) {
+e.preventDefault();
+const errorModal = `
+<div class="bg-[#1D1D1D] p-6 rounded-lg relative">
+<h3 class="text-xl font-bold mb-4">Ошибка</h3>
+<p class="text-secondary">Пожалуйста, заполните все поля формы</p>
+<button class="mt-4 bg-primary text-[#121212] font-semibold px-4 py-2 !rounded-button" onclick="closeModal()">Закрыть</button>
+</div>
+`;
+showModal(errorModal);
+return;
+}
+if (!checkbox.checked) {
+e.preventDefault();
+const errorModal = `
+<div class="bg-[#1D1D1D] p-6 rounded-lg relative">
+<h3 class="text-xl font-bold mb-4">Ошибка</h3>
+<p class="text-secondary">Пожалуйста, примите правила сервера и политику конфиденциальности</p>
+<button class="mt-4 bg-primary text-[#121212] font-semibold px-4 py-2 !rounded-button" onclick="closeModal()">Закрыть</button>
+</div>
+`;
+showModal(errorModal);
+return;
+}
+});
+}
+// Custom checkbox functionality
+const customCheckbox = document.querySelector('.custom-checkbox');
+if (customCheckbox) {
+customCheckbox.addEventListener('click', function() {
+this.checked = !this.checked;
+});
+}
+});
+</script>
+</body>
+</html>
